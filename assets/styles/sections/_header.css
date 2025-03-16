@@ -1,0 +1,50 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.header__logo {
+}
+
+.header__logo-title {
+    margin: 0;
+    font-weight: 900;
+    font-size: 1.8rem;
+}
+
+.header__logo-link {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+.header__nav {
+    font-size: 1rem;
+}
+
+.header__menu {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header__menu-item {
+}
+
+.header__menu-link {
+    font-size: 1rem;
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: 0.4s ease-in-out all;
+}
+
+.header__menu-link:hover {
+    color: var(--color-primary);
+    transition: 0.4s ease-in-out all;
+}
+
+.header__btns {
+}

@@ -6,3 +6,9 @@
 
 /* Base */
 @import 'common/_base.css';
+
+/* Sections */
+@import 'sections/_header.css';
+
+/* Components */
+@import 'components/_button.css';
