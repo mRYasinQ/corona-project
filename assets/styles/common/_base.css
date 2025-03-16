@@ -1,0 +1,55 @@
+/* Variable */
+:root {
+    /* Colors */
+    --color-background: #fdfdfd;
+    --color-primary: #33dab2;
+    --color-secondary: #13225c;
+    --text-color-primary: #919191;
+}
+
+/* Body */
+body {
+    font-family: Outfit;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color-primary);
+    background-color: var(--color-background);
+}
+
+/* Container */
+.container {
+    max-width: 80rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1200px) {
+    /* Container */
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    /* Container */
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Container */
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    /* Container */
+    .container {
+        max-width: 100%;
+    }
+}
