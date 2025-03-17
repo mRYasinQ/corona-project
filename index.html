@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" x-data="{ showMenu: false }">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -9,6 +9,12 @@
         <link rel="stylesheet" href="assets/styles/pages/home.css" />
     </head>
     <body>
+        <!-- Backdropts -->
+        <div
+            @click="showMenu = !showMenu"
+            x-bind:class="showMenu ? 'backdrop--enable' : 'backdrop--disable'"
+            class="backdrop"
+        ></div>
         <!-- Header -->
         <header class="container header">
             <div class="header__logo">
@@ -16,7 +22,7 @@
                     <a href="#" class="header__logo-link">Corona Virus</a>
                 </h2>
             </div>
-            <nav class="header__nav">
+            <nav x-bind:class="showMenu ? 'header__nav--active' : ''" class="header__nav">
                 <ul class="header__menu">
                     <li class="header__menu-item">
                         <a href="#" class="header__menu-link">Home</a>
@@ -34,6 +40,11 @@
             </nav>
             <div class="header__btns">
                 <a href="#" class="btn btn--primary">Get Start</a>
+                <span @click="showMenu = !showMenu" class="icon icon--lg icon--primary icon--pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1 1h5M1 5h10M6 9h5" />
+                    </svg>
+                </span>
             </div>
         </header>
         <!-- Main -->
@@ -58,5 +69,7 @@
                 </div>
             </section>
         </main>
+        <!-- Scripts -->
+        <script defer src="assets/scripts/alpinejs.min.js"></script>
     </body>
 </html>

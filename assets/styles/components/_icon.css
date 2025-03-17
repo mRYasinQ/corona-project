@@ -1,0 +1,29 @@
+.icon {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+}
+
+.icon > svg {
+    display: block;
+}
+
+.icon > svg {
+    pointer-events: none;
+}
+
+/* Utilities */
+.icon--pointer {
+    cursor: pointer;
+}
+
+/* Size */
+.icon--lg > svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Color */
+.icon--primary {
+    color: var(--color-secondary);
+}

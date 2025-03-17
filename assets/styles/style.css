@@ -11,4 +11,6 @@
 @import 'sections/_header.css';
 
 /* Components */
+@import 'components/_backdrop.css';
 @import 'components/_button.css';
+@import 'components/_icon.css';

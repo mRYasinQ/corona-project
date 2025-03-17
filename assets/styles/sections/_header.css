@@ -11,7 +11,7 @@
 .header__logo-title {
     margin: 0;
     font-weight: 900;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .header__logo-link {
@@ -47,4 +47,65 @@
 }
 
 .header__btns {
+}
+
+.header__btns > .icon {
+    display: none;
+}
+
+/* Responsive */
+@media only screen and (max-width: 992px) {
+    .header__nav {
+        width: 100%;
+        height: fit-content;
+        position: fixed;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 999;
+        background-color: var(--text-color-white);
+        border-top-left-radius: 1.25rem;
+        border-top-right-radius: 1.25rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s all;
+        transform: translateY(100%);
+    }
+
+    .header__nav--active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .header__menu {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem 1rem;
+    }
+
+    .header__menu-link {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .header__logo-title {
+        font-size: 1.8rem;
+    }
+
+    .header__btns {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .header__btns > .icon {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .header__logo-title {
+        font-size: 1.5rem;
+    }
 }
