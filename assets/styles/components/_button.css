@@ -9,5 +9,11 @@
 
 .btn--primary {
     background-color: var(--color-primary);
-    color: white;
+    color: var(--text-color-white);
+}
+
+.btn--secondary {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
 }

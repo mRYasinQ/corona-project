@@ -5,6 +5,7 @@
     --color-primary: #33dab2;
     --color-secondary: #13225c;
     --text-color-primary: #919191;
+    --text-color-white: #ffffff;
 }
 
 /* Body */
@@ -14,6 +15,7 @@ body {
     font-weight: 500;
     color: var(--text-color-primary);
     background-color: var(--color-background);
+    overflow-x: hidden;
 }
 
 /* Container */

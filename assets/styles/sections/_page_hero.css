@@ -1,0 +1,124 @@
+.page-hero {
+    display: flex;
+    align-items: center;
+    height: 90vh;
+}
+
+.page-hero__image {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 50%;
+}
+
+.page-hero__shape {
+    position: absolute;
+    clip-path: circle();
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: var(--color-primary);
+}
+
+.page-hero__shape--top {
+    top: 0;
+    left: 85%;
+}
+
+.page-hero__shape--left {
+    top: 25%;
+    left: 25%;
+}
+
+.page-hero__img {
+    width: 25rem;
+    filter: drop-shadow(15px -30px 350px var(--color-primary));
+}
+
+.page-hero__content {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 2.5rem;
+}
+
+.page-hero__title {
+    margin: 0;
+    padding: 0;
+    color: var(--color-secondary);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.page-hero__title-mark {
+    color: var(--color-primary);
+}
+
+.page-hero__text {
+    margin: 0;
+    line-height: 2rem;
+}
+
+.page-hero__btns {
+    display: inline-flex;
+    gap: 1rem;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1200px) {
+    .page-hero__shape--left {
+        left: 15%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .page-hero {
+        margin-top: 3rem;
+        height: 100%;
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+
+    .page-hero__image {
+        width: 100%;
+        flex-basis: 100%;
+        justify-content: center;
+    }
+
+    .page-hero__shape--top {
+        left: 65%;
+    }
+
+    .page-hero__shape--left {
+        left: 10%;
+    }
+
+    .page-hero__content {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .page-hero__title {
+        font-size: 2.8rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .page-hero__img {
+        width: 20rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .page-hero__shape--left {
+        display: none;
+    }
+
+    .page-hero__img {
+        width: 18rem;
+    }
+
+    .page-hero__title {
+        font-size: 2.2rem;
+    }
+}
