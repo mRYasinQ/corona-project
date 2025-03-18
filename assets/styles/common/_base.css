@@ -6,9 +6,12 @@
     --color-secondary: #13225c;
     --text-color-primary: #919191;
     --text-color-white: #ffffff;
+    --text-color-yellow: #ffbe3c;
+    --text-color-blue: #076ac6;
+    --border-color-primary: #f2f2f2;
 }
 
-/* Body */
+/* Styles */
 body {
     font-family: Outfit;
     font-size: 1rem;
@@ -16,6 +19,25 @@ body {
     color: var(--text-color-primary);
     background-color: var(--color-background);
     overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Utilities */
+.overflow-y--hidden {
+    overflow-y: hidden;
+}
+
+.text--yellow {
+    color: var(--text-color-yellow) !important;
+}
+
+.text--primary {
+    color: var(--color-primary) !important;
 }
 
 /* Container */

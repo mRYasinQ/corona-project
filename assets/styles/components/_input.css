@@ -1,0 +1,43 @@
+.input {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    border-radius: 10rem;
+    border: 1px solid var(--border-color-primary);
+    background-color: var(--color-background);
+}
+
+.input__image {
+    width: 3rem;
+    height: 1.5rem;
+    cursor: inherit;
+}
+
+.input__img {
+    width: 100%;
+    height: 100%;
+    cursor: inherit;
+}
+
+.input__inpt {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    color: var(--text-color-primary);
+    background-color: inherit;
+    cursor: inherit;
+}
+
+/* Utilites */
+.input--pointer {
+    cursor: pointer;
+}
+
+.input--text {
+    cursor: text;
+}

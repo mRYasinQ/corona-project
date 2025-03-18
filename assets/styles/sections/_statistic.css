@@ -1,0 +1,118 @@
+.statistic {
+}
+
+.statistic__content {
+    display: flex;
+    gap: 4rem;
+    margin-top: 3.5rem;
+}
+
+.statistic__content-left {
+    flex-basis: 70%;
+}
+
+.statistic__content-wrappper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.statistic__content-top {
+    height: 50%;
+}
+
+.statistic__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+.statistic__form-input {
+    width: 100%;
+}
+
+.statistic__form-button {
+}
+
+.statistic__content-bottom {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.statistic__content-data {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.statistic__content-data:first-child > .statistic__content-value {
+    text-align: start;
+}
+
+.statistic__content-value {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 750;
+    color: var(--text-color-blue);
+}
+
+.statistic__content-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.statistic__content-right {
+    flex-basis: 30%;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1200px) {
+    .statistic {
+        margin-top: 4rem;
+    }
+
+    .statistic__content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .statistic__content-wrappper {
+        gap: 3rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .statistic__form {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .statistic__form-button {
+        width: 100%;
+    }
+
+    .statistic__form-button > .btn {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .statistic__content-bottom {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        row-gap: 2rem;
+    }
+
+    .statistic__content-data {
+        grid-column: span 2 / span 2;
+    }
+
+    .statistic__content-value {
+        text-align: start;
+    }
+}

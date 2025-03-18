@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="assets/styles/style.css" />
         <link rel="stylesheet" href="assets/styles/pages/home.css" />
     </head>
-    <body>
+    <body x-bind:class="showMenu ? 'overflow-y--hidden' : ''">
         <!-- Backdropts -->
         <div
             @click="showMenu = !showMenu"
@@ -66,6 +66,96 @@
                     <img src="assets/images/hero.svg" alt="Doctor image" class="page-hero__img" />
                     <span class="page-hero__shape page-hero__shape--top"></span>
                     <span class="page-hero__shape page-hero__shape--left"></span>
+                </div>
+            </section>
+            <!-- Statistics -->
+            <section class="container statistic">
+                <div class="section__intro">
+                    <h3 class="section__intro-title">Statistics</h3>
+                </div>
+                <div class="statistic__content">
+                    <div class="statistic__content-left">
+                        <div class="statistic__content-wrappper">
+                            <div class="statistic__content-top">
+                                <form action="/" method="get" class="statistic__form">
+                                    <div class="statistic__form-input input input--pointer">
+                                        <div class="input__image">
+                                            <img
+                                                class="input__img"
+                                                src="assets/images/flags/Canada.svg"
+                                                alt="Selected country flag"
+                                            />
+                                        </div>
+                                        <select class="input__inpt" name="country">
+                                            <option value="0">Choose country</option>
+                                            <option value="iran">Iran</option>
+                                            <option value="usa">USA</option>
+                                            <option value="china">China</option>
+                                            <option value="canada" selected>Canada</option>
+                                            <option value="india">India</option>
+                                            <option value="argentina">Argentina</option>
+                                            <option value="brazil">Brazil</option>
+                                        </select>
+                                    </div>
+                                    <div class="statistic__form-input input input--pointer">
+                                        <div class="input__image">
+                                            <img class="input__img" src="assets/images/task.svg" alt="Date icon" />
+                                        </div>
+                                        <input class="input__inpt" type="date" name="date" id="dateInput" />
+                                    </div>
+                                    <div class="statistic__form-button">
+                                        <button type="submit" class="btn btn--primary">Filter</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="statistic__content-bottom">
+                                <div class="statistic__content-data">
+                                    <span class="statistic__content-value">14</span>
+                                    <span class="statistic__content-label">Rank</span>
+                                </div>
+                                <div class="statistic__content-data">
+                                    <span class="statistic__content-value">12,456</span>
+                                    <span class="statistic__content-label">Total Cases</span>
+                                </div>
+                                <div class="statistic__content-data">
+                                    <span class="statistic__content-value text--yellow">836</span>
+                                    <span class="statistic__content-label">Death</span>
+                                </div>
+                                <div class="statistic__content-data">
+                                    <span class="statistic__content-value">12,456</span>
+                                    <span class="statistic__content-label">Recovered</span>
+                                </div>
+                                <div class="statistic__content-data">
+                                    <span class="statistic__content-value">12,456</span>
+                                    <span class="statistic__content-label">Recovered</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="statistic__content-right">
+                        <div class="data__table">
+                            <h5 class="data__table-title">Today Statistics</h5>
+                            <hr class="data__tabale-hr" />
+                            <div class="data__table-content">
+                                <div class="data__table-item">
+                                    <span class="data__table-value">2,464</span>
+                                    <span class="data__table-label">Total Cases</span>
+                                </div>
+                                <div class="data__table-item">
+                                    <span class="data__table-value text--primary">981</span>
+                                    <span class="data__table-label">Recovered</span>
+                                </div>
+                                <div class="data__table-item">
+                                    <span class="data__table-value">1,643</span>
+                                    <span class="data__table-label">Infected Now</span>
+                                </div>
+                                <div class="data__table-item">
+                                    <span class="data__table-value text--yellow">542</span>
+                                    <span class="data__table-label">Death</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

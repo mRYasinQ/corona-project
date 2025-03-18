@@ -1,5 +1,7 @@
 .btn {
     display: inline-block;
+    border: none;
+    outline: none;
     padding: 0.8rem 1.8rem;
     border-radius: 10rem;
     font-size: 1rem;
