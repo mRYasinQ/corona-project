@@ -14,7 +14,7 @@
     text-transform: uppercase;
 }
 
-.data__tabale-hr {
+.data__table-hr {
     border: 1px solid var(--border-color-primary);
     margin-block: 1rem;
 }
