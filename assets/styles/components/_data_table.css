@@ -6,7 +6,7 @@
     border-radius: 0.8rem;
     padding: 1.5rem 1.25rem;
     background-color: var(--text-color-white);
-    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+    box-shadow: var(--shadow--primary);
 }
 
 .data__table-header {

@@ -8,7 +8,10 @@
     --text-color-white: #ffffff;
     --text-color-yellow: #ffbe3c;
     --text-color-blue: #076ac6;
+    --text-color-dark: #272d3b;
     --border-color-primary: #f2f2f2;
+    /* Shadow */
+    --shadow--primary: 0px 8px 24px rgba(149, 157, 165, 0.2);
 }
 
 /* Styles */
