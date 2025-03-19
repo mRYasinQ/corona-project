@@ -18,6 +18,16 @@
 }
 
 /* Size */
+.icon--sm > svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.icon--md > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 .icon--lg > svg {
     width: 2rem;
     height: 2rem;
@@ -26,4 +36,8 @@
 /* Color */
 .icon--primary {
     color: var(--color-secondary);
+}
+
+.icon--dark {
+    color: var(--text-color-dark);
 }
