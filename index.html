@@ -160,8 +160,60 @@
                     </div>
                 </div>
             </section>
+            <!-- Chart -->
+            <section class="container chart">
+                <div class="section__intro">
+                    <h3 class="section__intro-title">Chart</h3>
+                </div>
+                <div class="chart__content">
+                    <div class="chart__content-item">
+                        <div class="chart-box">
+                            <h5 class="chart-box-title">Total Cases</h5>
+                            <div class="chart-box__content">
+                                <canvas class="chart-box__chart" id="chart-1"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart__content-item">
+                        <div class="chart-box">
+                            <h5 class="chart-box-title">Total Cases</h5>
+                            <div class="chart-box__content">
+                                <canvas class="chart-box__chart" id="chart-2"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart__content-item">
+                        <div class="data__table">
+                            <div class="data__table-header">
+                                <h5 class="data__table-title">Wordlwide Statistics</h5>
+                                <hr class="data__table-hr" />
+                            </div>
+                            <div class="data__table-content">
+                                <div class="data__table-item">
+                                    <span class="data__table-value">2,464</span>
+                                    <span class="data__table-label">Total Cases</span>
+                                </div>
+                                <div class="data__table-item">
+                                    <span class="data__table-value text--primary">981</span>
+                                    <span class="data__table-label">Recovered</span>
+                                </div>
+                                <div class="data__table-item">
+                                    <span class="data__table-value">1,643</span>
+                                    <span class="data__table-label">Infected Now</span>
+                                </div>
+                                <div class="data__table-item">
+                                    <span class="data__table-value text--yellow">542</span>
+                                    <span class="data__table-label">Death</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <!-- Scripts -->
         <script src="assets/scripts/alpinejs.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="assets/scripts/app.js"></script>
     </body>
 </html>
