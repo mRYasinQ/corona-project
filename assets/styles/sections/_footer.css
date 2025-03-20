@@ -23,7 +23,6 @@
 }
 
 .footer__content-box {
-    height: 12rem;
 }
 
 .footer__content-title {
@@ -103,10 +102,6 @@
         grid-column: span 8 / span 8;
     }
 
-    .footer__content-box {
-        height: auto;
-    }
-
     .footer__form {
         width: 100%;
     }
@@ -115,5 +110,17 @@
 @media only screen and (max-width: 576px) {
     .footer__content-item {
         grid-column: span 8 / span 8;
+    }
+
+    .footer__form {
+        flex-direction: column;
+    }
+
+    .footer__button {
+        width: 100%;
+    }
+
+    .footer__button > .btn {
+        width: 100%;
     }
 }
