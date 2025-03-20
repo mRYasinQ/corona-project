@@ -9,6 +9,7 @@
 
 /* Sections */
 @import 'sections/_header.css';
+@import 'sections/_footer.css';
 
 /* Components */
 @import 'components/_backdrop.css';
