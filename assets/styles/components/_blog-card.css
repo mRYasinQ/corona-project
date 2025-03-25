@@ -67,13 +67,12 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    filter: contrast(30%);
+    color: var(--text-color-gray);
 }
 
 .blog-card__content-value {
     font-size: 0.9rem;
     font-weight: 400;
-    color: var(--text-color-white);
 }
 
 @media only screen and (max-width: 576px) {
