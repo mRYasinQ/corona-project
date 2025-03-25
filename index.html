@@ -9,13 +9,11 @@
         <link rel="stylesheet" href="assets/styles/pages/home.css" />
     </head>
     <body x-bind:class="showMenu ? 'overflow-y--hidden' : ''">
-        <!-- Backdrops -->
         <div
             @click="showMenu = !showMenu"
             x-bind:class="showMenu ? 'backdrop--enable' : 'backdrop--disable'"
             class="backdrop"
         ></div>
-        <!-- Header -->
         <header class="container header">
             <div class="header__logo">
                 <h2 class="header__logo-title">
@@ -47,9 +45,7 @@
                 </span>
             </div>
         </header>
-        <!-- Main -->
         <main class="container">
-            <!-- Page Hero -->
             <section class="page-hero">
                 <div class="page-hero__content">
                     <h1 class="page-hero__title"><span class="page-hero__title-mark">Corona</span> virus statistics</h1>
@@ -68,7 +64,6 @@
                     <span class="page-hero__shape page-hero__shape--left"></span>
                 </div>
             </section>
-            <!-- Statistics -->
             <section class="statistic">
                 <div class="section__intro">
                     <h3 class="section__intro-title">Statistics</h3>
@@ -168,7 +163,6 @@
                     </div>
                 </div>
             </section>
-            <!-- Chart -->
             <section class="chart">
                 <div class="section__intro">
                     <h3 class="section__intro-title">Chart</h3>
@@ -218,7 +212,6 @@
                     </div>
                 </div>
             </section>
-            <!-- Countries -->
             <section class="countries">
                 <div class="countries__wrapper">
                     <div class="countries-header">
@@ -471,7 +464,6 @@
                     </div>
                 </div>
             </section>
-            <!-- Blog -->
             <section class="blog">
                 <div class="section__intro">
                     <h3 class="section__intro-title">Blog</h3>
@@ -670,7 +662,6 @@
                 </div>
             </section>
         </main>
-        <!-- Footer -->
         <footer class="footer">
             <div class="footer__content">
                 <div class="container">
@@ -735,7 +726,6 @@
                 </div>
             </div>
         </footer>
-        <!-- Scripts -->
         <script src="assets/scripts/alpinejs.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="assets/scripts/app.js"></script>

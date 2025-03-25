@@ -10,7 +10,6 @@
     text-transform: uppercase;
 }
 
-/* Responsive */
 @media only screen and (max-width: 992px) {
     .section__intro-title {
         font-size: 2.2rem;

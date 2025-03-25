@@ -13,7 +13,6 @@
     cursor: pointer;
 }
 
-/* Utilities */
 .btn--legendary {
     font-weight: 600;
     color: var(--color-background);

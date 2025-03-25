@@ -64,7 +64,6 @@
     gap: 1rem;
 }
 
-/* Responsive */
 @media only screen and (max-width: 1200px) {
     .page-hero__shape--left {
         left: 15%;

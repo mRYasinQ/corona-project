@@ -89,7 +89,6 @@
     padding: 1.5rem 1.25rem;
 }
 
-/* Responsive */
 @media only screen and (max-width: 768px) {
     .countries-title {
         font-size: 1.2rem;

@@ -49,7 +49,6 @@
     height: calc(28rem + 1rem);
 }
 
-/* Responsive */
 @media only screen and (max-width: 1200px) {
     .blog__content {
         grid-template-columns: repeat(4, minmax(0, 1fr));
