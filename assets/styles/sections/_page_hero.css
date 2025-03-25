@@ -4,14 +4,19 @@
     height: 90vh;
 }
 
-.page-hero__image {
+.page-hero-image {
     position: relative;
     display: flex;
     justify-content: flex-end;
     flex-basis: 50%;
 }
 
-.page-hero__shape {
+.page-hero-image > img {
+    width: 25rem;
+    filter: drop-shadow(15px -30px 350px var(--color-primary));
+}
+
+.page-hero-shape {
     position: absolute;
     clip-path: circle();
     width: 0.8rem;
@@ -19,22 +24,17 @@
     background-color: var(--color-primary);
 }
 
-.page-hero__shape--top {
+.page-hero-shape-top {
     top: 0;
     left: 85%;
 }
 
-.page-hero__shape--left {
+.page-hero-shape-left {
     top: 25%;
     left: 25%;
 }
 
-.page-hero__img {
-    width: 25rem;
-    filter: drop-shadow(15px -30px 350px var(--color-primary));
-}
-
-.page-hero__content {
+.page-hero-content {
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
@@ -42,7 +42,7 @@
     gap: 2.5rem;
 }
 
-.page-hero__title {
+.page-hero-title {
     margin: 0;
     padding: 0;
     color: var(--color-secondary);
@@ -50,22 +50,22 @@
     font-weight: 700;
 }
 
-.page-hero__title-mark {
+.page-hero-title > span {
     color: var(--color-primary);
 }
 
-.page-hero__text {
+.page-hero-text {
     margin: 0;
     line-height: 2rem;
 }
 
-.page-hero__btns {
+.page-hero-btns {
     display: inline-flex;
     gap: 1rem;
 }
 
 @media only screen and (max-width: 1200px) {
-    .page-hero__shape--left {
+    .page-hero-shape-left {
         left: 15%;
     }
 }
@@ -78,46 +78,46 @@
         gap: 3rem;
     }
 
-    .page-hero__image {
+    .page-hero-image {
         width: 100%;
         flex-basis: 100%;
         justify-content: center;
     }
 
-    .page-hero__shape--top {
+    .page-hero-shape-top {
         left: 65%;
     }
 
-    .page-hero__shape--left {
+    .page-hero-shape-left {
         left: 10%;
     }
 
-    .page-hero__content {
+    .page-hero-content {
         width: 100%;
         flex-basis: 100%;
     }
 
-    .page-hero__title {
+    .page-hero-title {
         font-size: 2.8rem;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .page-hero__img {
+    .page-hero-image > img {
         width: 20rem;
     }
 }
 
 @media only screen and (max-width: 576px) {
-    .page-hero__shape--left {
+    .page-hero-shape-left {
         display: none;
     }
 
-    .page-hero__img {
+    .page-hero-image > img {
         width: 18rem;
     }
 
-    .page-hero__title {
+    .page-hero-title {
         font-size: 2.2rem;
     }
 }

@@ -1,4 +1,4 @@
-.data__table {
+.data-table {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -9,30 +9,30 @@
     box-shadow: var(--shadow--primary);
 }
 
-.data__table-header {
+.data-table-header {
 }
 
-.data__table-hr {
+.data-table-hr {
     border: 2px solid var(--border-color-primary);
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
 }
 
-.data__table-title {
+.data-table-title {
     margin: 0;
     color: var(--color-secondary);
     font-weight: 800;
     text-transform: uppercase;
 }
 
-.data__table-content {
+.data-table-content {
     display: flex;
     flex-wrap: wrap;
     row-gap: 1.5rem;
     height: 100%;
 }
 
-.data__table-item {
+.data-table-item {
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
@@ -40,13 +40,13 @@
     gap: 0.5rem;
 }
 
-.data__table-value {
+.data-table-value {
     font-size: 1rem;
     font-weight: 700;
     color: var(--color-secondary);
 }
 
-.data__table-label {
+.data-table-label {
     font-size: 0.9rem;
     font-weight: 650;
     color: var(--color-primary);

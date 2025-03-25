@@ -8,37 +8,37 @@
         <link rel="stylesheet" href="assets/styles/style.css" />
         <link rel="stylesheet" href="assets/styles/pages/home.css" />
     </head>
-    <body x-bind:class="showMenu ? 'overflow-y--hidden' : ''">
+    <body x-bind:class="showMenu ? 'overflow-y-hidden' : ''">
         <div
             @click="showMenu = !showMenu"
-            x-bind:class="showMenu ? 'backdrop--enable' : 'backdrop--disable'"
+            x-bind:class="showMenu ? 'backdrop-enable' : 'backdrop-disable'"
             class="backdrop"
         ></div>
         <header class="container header">
-            <div class="header__logo">
-                <h2 class="header__logo-title">
-                    <a href="#" class="header__logo-link">Corona Virus</a>
+            <div class="header-logo">
+                <h2 class="header-logo-title">
+                    <a href="#" class="header-logo-link">Corona Virus</a>
                 </h2>
             </div>
-            <nav x-bind:class="showMenu ? 'header__nav--active' : ''" class="header__nav">
-                <ul class="header__menu">
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link">Home</a>
+            <nav x-bind:class="showMenu ? 'header-nav-active' : ''" class="header-nav">
+                <ul class="header-menu">
+                    <li class="header-menu-item">
+                        <a href="#" class="header-menu-link">Home</a>
                     </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link">Services</a>
+                    <li class="header-menu-item">
+                        <a href="#" class="header-menu-link">Services</a>
                     </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link">Question & Answers</a>
+                    <li class="header-menu-item">
+                        <a href="#" class="header-menu-link">Question & Answers</a>
                     </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link">About Us</a>
+                    <li class="header-menu-item">
+                        <a href="#" class="header-menu-link">About Us</a>
                     </li>
                 </ul>
             </nav>
-            <div class="header__btns">
-                <a href="#" class="btn btn--medium btn--legendary">Get Start</a>
-                <span @click="showMenu = !showMenu" class="icon icon--lg icon--primary icon--pointer">
+            <div class="header-btns">
+                <a href="#" class="btn btn-medium btn-legendary">Get Start</a>
+                <span @click="showMenu = !showMenu" class="icon icon-large icon-primary icon-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1 1h5M1 5h10M6 9h5" />
                     </svg>
@@ -47,42 +47,38 @@
         </header>
         <main class="container">
             <section class="page-hero">
-                <div class="page-hero__content">
-                    <h1 class="page-hero__title"><span class="page-hero__title-mark">Corona</span> virus statistics</h1>
-                    <p class="page-hero__text">
+                <div class="page-hero-content">
+                    <h1 class="page-hero-title"><span>Corona</span> virus statistics</h1>
+                    <p class="page-hero-text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsa earum quasi molestiae
                         soluta quae modi! Harum esse ipsa distinctio ipsam!
                     </p>
-                    <div class="page-hero__btns">
-                        <a href="#" class="btn btn--large btn--primary">Our Services</a>
-                        <a href="#" class="btn btn--large btn--secondary">Support</a>
+                    <div class="page-hero-btns">
+                        <a href="#" class="btn btn-large btn-primary">Our Services</a>
+                        <a href="#" class="btn btn-large btn-secondary">Support</a>
                     </div>
                 </div>
-                <div class="page-hero__image">
-                    <img src="assets/images/hero.svg" alt="Doctor image" class="page-hero__img" />
-                    <span class="page-hero__shape page-hero__shape--top"></span>
-                    <span class="page-hero__shape page-hero__shape--left"></span>
+                <div class="page-hero-image">
+                    <img src="assets/images/hero.svg" alt="Doctor image" />
+                    <span class="page-hero-shape page-hero-shape-top"></span>
+                    <span class="page-hero-shape page-hero-shape-left"></span>
                 </div>
             </section>
             <section class="statistic">
-                <div class="section__intro">
-                    <h3 class="section__intro-title">Statistics</h3>
+                <div class="section-intro">
+                    <h3 class="section-intro-title">Statistics</h3>
                 </div>
-                <div class="statistic__content">
-                    <div class="statistic__content-left">
-                        <div class="statistic__content-wrappper">
-                            <div class="statistic__content-top">
-                                <form action="/" method="get" class="statistic__form">
-                                    <div class="statistic__form-input">
-                                        <div class="input input--pointer">
-                                            <div class="input__image">
-                                                <img
-                                                    class="input__img"
-                                                    src="assets/images/flags/Canada.svg"
-                                                    alt="Selected country flag"
-                                                />
+                <div class="statistic-content">
+                    <div class="statistic-content-left">
+                        <div class="statistic-content-wrappper">
+                            <div class="statistic-content-top">
+                                <form action="/" method="get" class="statistic-form">
+                                    <div class="statistic-form-input">
+                                        <div class="input input-pointer">
+                                            <div class="input-image">
+                                                <img src="assets/images/flags/Canada.svg" alt="Selected country flag" />
                                             </div>
-                                            <select class="input__inpt" name="country">
+                                            <select class="input-inpt" name="country">
                                                 <option value="0">Choose country</option>
                                                 <option value="iran">Iran</option>
                                                 <option value="usa">USA</option>
@@ -94,69 +90,65 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="statistic__form-input">
-                                        <div class="input input--pointer">
-                                            <div class="input__image">
-                                                <img
-                                                    class="input__img"
-                                                    src="assets/images/icons/task.svg"
-                                                    alt="Date icon"
-                                                />
+                                    <div class="statistic-form-input">
+                                        <div class="input input-pointer">
+                                            <div class="input-image">
+                                                <img src="assets/images/icons/task.svg" alt="Date icon" />
                                             </div>
-                                            <input class="input__inpt" type="date" name="date" id="dateInput" />
+                                            <input class="input-inpt" type="date" name="date" id="dateInput" />
                                         </div>
                                     </div>
-                                    <div class="statistic__form-button">
-                                        <button type="submit" class="btn btn--small btn--primary">Filter</button>
+                                    <div class="statistic-form-button">
+                                        <button type="submit" class="btn btn-small btn-primary">Filter</button>
                                     </div>
                                 </form>
                             </div>
-                            <div class="statistic__content-bottom">
-                                <div class="statistic__content-data">
-                                    <span class="statistic__content-value">14</span>
-                                    <span class="statistic__content-label">Rank</span>
+                            <div class="statistic-content-bottom">
+                                <div class="statistic-content-data">
+                                    <span class="statistic-content-value">14</span>
+                                    <span class="statistic-content-label">Rank</span>
                                 </div>
-                                <div class="statistic__content-data">
-                                    <span class="statistic__content-value">12,456</span>
-                                    <span class="statistic__content-label">Total Cases</span>
+                                <div class="statistic-content-data">
+                                    <span class="statistic-content-value">12,456</span>
+                                    <span class="statistic-content-label">Total Cases</span>
                                 </div>
-                                <div class="statistic__content-data">
-                                    <span class="statistic__content-value text--yellow">836</span>
-                                    <span class="statistic__content-label">Death</span>
+                                <div class="statistic-content-data">
+                                    <span class="statistic-content-value text-yellow">836</span>
+                                    <span class="statistic-content-label">Death</span>
                                 </div>
-                                <div class="statistic__content-data">
-                                    <span class="statistic__content-value">12,456</span>
-                                    <span class="statistic__content-label">Recovered</span>
+                                <div class="statistic-content-data">
+                                    <span class="statistic-content-value">12,456</span>
+                                    <span class="statistic-content-label">Recovered</span>
                                 </div>
-                                <div class="statistic__content-data">
-                                    <span class="statistic__content-value">12,456</span>
-                                    <span class="statistic__content-label">Recovered</span>
+                                <div class="statistic-content-data">
+                                    <span class="statistic-content-value">12,456</span>
+                                    <span class="statistic-content-label">Recovered</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="statistic__content-right">
-                        <div class="data__table">
-                            <div class="data__table-header">
-                                <h5 class="data__table-title">Today Statistics</h5>
-                                <hr class="data__table-hr" />
+                    <div class="statistic-content-right">
+                        <div class="data-table">
+                            <div class="data-table-header">
+                                <h5 class="data-table-title">Today Statistics</h5>
+                                <hr class="data-table-hr" />
                             </div>
-                            <div class="data__table-content">
-                                <div class="data__table-item">
-                                    <span class="data__table-value">2,464</span>
-                                    <span class="data__table-label">Total Cases</span>
+                            <div class="data-table-content">
+                                <div class="data-table-item">
+                                    <span class="data-table-value">2,464</span>
+                                    <span class="data-table-label">Total Cases</span>
                                 </div>
-                                <div class="data__table-item">
-                                    <span class="data__table-value text--primary">981</span>
-                                    <span class="data__table-label">Recovered</span>
+                                <div class="data-table-item">
+                                    <span class="data-table-value text-primary">981</span>
+                                    <span class="data-table-label">Recovered</span>
                                 </div>
-                                <div class="data__table-item">
-                                    <span class="data__table-value">1,643</span>
-                                    <span class="data__table-label">Infected Now</span>
+                                <div class="data-table-item">
+                                    <span class="data-table-value">1,643</span>
+                                    <span class="data-table-label">Infected Now</span>
                                 </div>
-                                <div class="data__table-item">
-                                    <span class="data__table-value text--yellow">542</span>
-                                    <span class="data__table-label">Death</span>
+                                <div class="data-table-item">
+                                    <span class="data-table-value text-yellow">542</span>
+                                    <span class="data-table-label">Death</span>
                                 </div>
                             </div>
                         </div>
@@ -164,48 +156,48 @@
                 </div>
             </section>
             <section class="chart">
-                <div class="section__intro">
-                    <h3 class="section__intro-title">Chart</h3>
+                <div class="section-intro">
+                    <h3 class="section-intro-title">Chart</h3>
                 </div>
-                <div class="chart__content">
-                    <div class="chart__content-item">
+                <div class="chart-content">
+                    <div class="chart-content-item">
                         <div class="chart-box">
                             <h5 class="chart-box-title">Total Cases</h5>
-                            <div class="chart-box__content">
-                                <canvas class="chart-box__chart" id="chart-1"></canvas>
+                            <div class="chart-box-content">
+                                <canvas class="chart-box-chart" id="chart-1"></canvas>
                             </div>
                         </div>
                     </div>
-                    <div class="chart__content-item">
+                    <div class="chart-content-item">
                         <div class="chart-box">
                             <h5 class="chart-box-title">Total Cases</h5>
-                            <div class="chart-box__content">
-                                <canvas class="chart-box__chart" id="chart-2"></canvas>
+                            <div class="chart-box-content">
+                                <canvas class="chart-box-chart" id="chart-2"></canvas>
                             </div>
                         </div>
                     </div>
-                    <div class="chart__content-item">
-                        <div class="data__table">
-                            <div class="data__table-header">
-                                <h5 class="data__table-title">Wordlwide Statistics</h5>
-                                <hr class="data__table-hr" />
+                    <div class="chart-content-item">
+                        <div class="data-table">
+                            <div class="data-table-header">
+                                <h5 class="data-table-title">Wordlwide Statistics</h5>
+                                <hr class="data-table-hr" />
                             </div>
-                            <div class="data__table-content">
-                                <div class="data__table-item">
-                                    <span class="data__table-value">2,464</span>
-                                    <span class="data__table-label">Total Cases</span>
+                            <div class="data-table-content">
+                                <div class="data-table-item">
+                                    <span class="data-table-value">2,464</span>
+                                    <span class="data-table-label">Total Cases</span>
                                 </div>
-                                <div class="data__table-item">
-                                    <span class="data__table-value text--primary">981</span>
-                                    <span class="data__table-label">Recovered</span>
+                                <div class="data-table-item">
+                                    <span class="data-table-value text-primary">981</span>
+                                    <span class="data-table-label">Recovered</span>
                                 </div>
-                                <div class="data__table-item">
-                                    <span class="data__table-value">1,643</span>
-                                    <span class="data__table-label">Infected Now</span>
+                                <div class="data-table-item">
+                                    <span class="data-table-value">1,643</span>
+                                    <span class="data-table-label">Infected Now</span>
                                 </div>
-                                <div class="data__table-item">
-                                    <span class="data__table-value text--yellow">542</span>
-                                    <span class="data__table-label">Death</span>
+                                <div class="data-table-item">
+                                    <span class="data-table-value text-yellow">542</span>
+                                    <span class="data-table-label">Death</span>
                                 </div>
                             </div>
                         </div>
@@ -213,18 +205,18 @@
                 </div>
             </section>
             <section class="countries">
-                <div class="countries__wrapper">
+                <div class="countries-wrapper">
                     <div class="countries-header">
-                        <h4 class="countries__title">Orders Country</h4>
-                        <button class="btn btn--medium btn--primary">Filter</button>
+                        <h4 class="countries-title">Orders Country</h4>
+                        <button class="btn btn-medium btn-primary">Filter</button>
                     </div>
-                    <div class="countries__content">
-                        <div class="countries__table">
-                            <table class="countries__tbl">
+                    <div class="countries-content">
+                        <div class="countries-table">
+                            <table class="countries-tbl">
                                 <thead>
-                                    <tr class="countries__tbl-header-row">
+                                    <tr class="countries-tbl-header-row">
                                         <th>
-                                            <span class="icon icon--md">
+                                            <span class="icon icon-medium">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                                     <g clip-path="url(#a)">
                                                         <path
@@ -252,14 +244,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="countries__tbl-body-row">
+                                    <tr class="countries-tbl-body-row">
                                         <td>
-                                            <div class="countries__tbl-image">
-                                                <img
-                                                    class="countries__tbl-img"
-                                                    src="assets/images/flags/USA.svg"
-                                                    alt="Country flag"
-                                                />
+                                            <div class="countries-tbl-image">
+                                                <img src="assets/images/flags/USA.svg" alt="Country flag" />
                                             </div>
                                         </td>
                                         <td>USA</td>
@@ -269,7 +257,7 @@
                                         <td>1</td>
                                         <td>IN332942</td>
                                         <td>
-                                            <span class="icon icon--sm icon--dark icon--pointer">
+                                            <span class="icon icon-small icon-dark icon-pointer">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 3 13">
                                                     <path
                                                         fill="currentColor"
@@ -281,14 +269,10 @@
                                             </span>
                                         </td>
                                     </tr>
-                                    <tr class="countries__tbl-body-row">
+                                    <tr class="countries-tbl-body-row">
                                         <td>
-                                            <div class="countries__tbl-image">
-                                                <img
-                                                    class="countries__tbl-img"
-                                                    src="assets/images/flags/China.svg"
-                                                    alt="Country flag"
-                                                />
+                                            <div class="countries-tbl-image">
+                                                <img src="assets/images/flags/China.svg" alt="Country flag" />
                                             </div>
                                         </td>
                                         <td>China</td>
@@ -298,7 +282,7 @@
                                         <td>2</td>
                                         <td>IN332942</td>
                                         <td>
-                                            <span class="icon icon--sm icon--dark icon--pointer">
+                                            <span class="icon icon-small icon-dark icon-pointer">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 3 13">
                                                     <path
                                                         fill="currentColor"
@@ -310,14 +294,10 @@
                                             </span>
                                         </td>
                                     </tr>
-                                    <tr class="countries__tbl-body-row">
+                                    <tr class="countries-tbl-body-row">
                                         <td>
-                                            <div class="countries__tbl-image">
-                                                <img
-                                                    class="countries__tbl-img"
-                                                    src="assets/images/flags/India.svg"
-                                                    alt="Country flag"
-                                                />
+                                            <div class="countries-tbl-image">
+                                                <img src="assets/images/flags/India.svg" alt="Country flag" />
                                             </div>
                                         </td>
                                         <td>India</td>
@@ -327,7 +307,7 @@
                                         <td>3</td>
                                         <td>IN332942</td>
                                         <td>
-                                            <span class="icon icon--sm icon--dark icon--pointer">
+                                            <span class="icon icon-small icon-dark icon-pointer">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 3 13">
                                                     <path
                                                         fill="currentColor"
@@ -339,14 +319,10 @@
                                             </span>
                                         </td>
                                     </tr>
-                                    <tr class="countries__tbl-body-row">
+                                    <tr class="countries-tbl-body-row">
                                         <td>
-                                            <div class="countries__tbl-image">
-                                                <img
-                                                    class="countries__tbl-img"
-                                                    src="assets/images/flags/Brazil.svg"
-                                                    alt="Country flag"
-                                                />
+                                            <div class="countries-tbl-image">
+                                                <img src="assets/images/flags/Brazil.svg" alt="Country flag" />
                                             </div>
                                         </td>
                                         <td>Brazil</td>
@@ -356,7 +332,7 @@
                                         <td>4</td>
                                         <td>IN332942</td>
                                         <td>
-                                            <span class="icon icon--sm icon--dark icon--pointer">
+                                            <span class="icon icon-small icon-dark icon-pointer">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 3 13">
                                                     <path
                                                         fill="currentColor"
@@ -368,14 +344,10 @@
                                             </span>
                                         </td>
                                     </tr>
-                                    <tr class="countries__tbl-body-row">
+                                    <tr class="countries-tbl-body-row">
                                         <td>
-                                            <div class="countries__tbl-image">
-                                                <img
-                                                    class="countries__tbl-img"
-                                                    src="assets/images/flags/Argentina.svg"
-                                                    alt="Country flag"
-                                                />
+                                            <div class="countries-tbl-image">
+                                                <img src="assets/images/flags/Argentina.svg" alt="Country flag" />
                                             </div>
                                         </td>
                                         <td>Argentina</td>
@@ -385,7 +357,7 @@
                                         <td>5</td>
                                         <td>IN332942</td>
                                         <td>
-                                            <span class="icon icon--sm icon--dark icon--pointer">
+                                            <span class="icon icon-small icon-dark icon-pointer">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 3 13">
                                                     <path
                                                         fill="currentColor"
@@ -397,14 +369,10 @@
                                             </span>
                                         </td>
                                     </tr>
-                                    <tr class="countries__tbl-body-row">
+                                    <tr class="countries-tbl-body-row">
                                         <td>
-                                            <div class="countries__tbl-image">
-                                                <img
-                                                    class="countries__tbl-img"
-                                                    src="assets/images/flags/Iran.svg"
-                                                    alt="Country flag"
-                                                />
+                                            <div class="countries-tbl-image">
+                                                <img src="assets/images/flags/Iran.svg" alt="Country flag" />
                                             </div>
                                         </td>
                                         <td>Iran</td>
@@ -414,7 +382,7 @@
                                         <td>6</td>
                                         <td>IN332942</td>
                                         <td>
-                                            <span class="icon icon--sm icon--dark icon--pointer">
+                                            <span class="icon icon-small icon-dark icon-pointer">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 3 13">
                                                     <path
                                                         fill="currentColor"
@@ -426,14 +394,10 @@
                                             </span>
                                         </td>
                                     </tr>
-                                    <tr class="countries__tbl-body-row">
+                                    <tr class="countries-tbl-body-row">
                                         <td>
-                                            <div class="countries__tbl-image">
-                                                <img
-                                                    class="countries__tbl-img"
-                                                    src="assets/images/flags/Canada.svg"
-                                                    alt="Country flag"
-                                                />
+                                            <div class="countries-tbl-image">
+                                                <img src="assets/images/flags/Canada.svg" alt="Country flag" />
                                             </div>
                                         </td>
                                         <td>Canada</td>
@@ -443,7 +407,7 @@
                                         <td>7</td>
                                         <td>IN332942</td>
                                         <td>
-                                            <span class="icon icon--sm icon--dark icon--pointer">
+                                            <span class="icon icon-small icon-dark icon-pointer">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 3 13">
                                                     <path
                                                         fill="currentColor"
@@ -459,28 +423,28 @@
                             </table>
                         </div>
                     </div>
-                    <div class="countries__btns">
-                        <button class="btn btn--medium btn--primary">See More</button>
+                    <div class="countries-btns">
+                        <button class="btn btn-medium btn-primary">See More</button>
                     </div>
                 </div>
             </section>
             <section class="blog">
-                <div class="section__intro">
-                    <h3 class="section__intro-title">Blog</h3>
+                <div class="section-intro">
+                    <h3 class="section-intro-title">Blog</h3>
                 </div>
-                <div class="blog__content">
-                    <div class="blog__content-item">
+                <div class="blog-content">
+                    <div class="blog-item">
                         <div class="blog-card">
-                            <figure class="blog-card__figure">
-                                <img class="blog-card__img" src="assets/images/blogs/01.jpg" alt="blog image" />
+                            <figure class="blog-card-figure">
+                                <img src="assets/images/blogs/01.jpg" alt="blog image" />
                             </figure>
-                            <div class="blog-card__content">
-                                <h3 class="blog-card__content-title">
-                                    <a class="blog-card__content-link" href="#">10 Dangerous diseases Lorem spam</a>
+                            <div class="blog-card-content">
+                                <h3 class="blog-card-title">
+                                    <a class="blog-card-link" href="#">10 Dangerous diseases Lorem spam</a>
                                 </h3>
-                                <div class="blog-card__content-info">
-                                    <div class="blog-card__content-data">
-                                        <span class="icon icon--sm">
+                                <div class="blog-card-info">
+                                    <div class="blog-card-data">
+                                        <span class="icon icon-small">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 22">
                                                 <path
                                                     stroke="currentColor"
@@ -490,10 +454,10 @@
                                                 />
                                             </svg>
                                         </span>
-                                        <span class="blog-card__content-value">2022/06/21</span>
+                                        <span class="blog-card-value">2022/06/21</span>
                                     </div>
-                                    <div class="blog-card__content-data">
-                                        <span class="icon icon--sm">
+                                    <div class="blog-card-data">
+                                        <span class="icon icon-small">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
                                                 <path
                                                     fill="currentColor"
@@ -501,24 +465,24 @@
                                                 />
                                             </svg>
                                         </span>
-                                        <span class="blog-card__content-value">Yasin Abbasi</span>
+                                        <span class="blog-card-value">Yasin Abbasi</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="blog__content-item">
+                    <div class="blog-item">
                         <div class="blog-card">
-                            <figure class="blog-card__figure">
-                                <img class="blog-card__img" src="assets/images/blogs/03.jpg" alt="blog image" />
+                            <figure class="blog-card-figure">
+                                <img src="assets/images/blogs/03.jpg" alt="blog image" />
                             </figure>
-                            <div class="blog-card__content">
-                                <h3 class="blog-card__content-title">
-                                    <a class="blog-card__content-link" href="#">10 Dangerous diseases Lorem spam</a>
+                            <div class="blog-card-content">
+                                <h3 class="blog-card-title">
+                                    <a class="blog-card-link" href="#">10 Dangerous diseases Lorem spam</a>
                                 </h3>
-                                <div class="blog-card__content-info">
-                                    <div class="blog-card__content-data">
-                                        <span class="icon icon--sm">
+                                <div class="blog-card-info">
+                                    <div class="blog-card-data">
+                                        <span class="icon icon-small">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 22">
                                                 <path
                                                     stroke="currentColor"
@@ -528,10 +492,10 @@
                                                 />
                                             </svg>
                                         </span>
-                                        <span class="blog-card__content-value">2022/06/21</span>
+                                        <span class="blog-card-value">2022/06/21</span>
                                     </div>
-                                    <div class="blog-card__content-data">
-                                        <span class="icon icon--sm">
+                                    <div class="blog-card-data">
+                                        <span class="icon icon-small">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
                                                 <path
                                                     fill="currentColor"
@@ -539,24 +503,24 @@
                                                 />
                                             </svg>
                                         </span>
-                                        <span class="blog-card__content-value">Yasin Abbasi</span>
+                                        <span class="blog-card-value">Yasin Abbasi</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="blog__content-item">
+                    <div class="blog-item">
                         <div class="blog-card">
-                            <figure class="blog-card__figure">
-                                <img class="blog-card__img" src="assets/images/blogs/02.png" alt="blog image" />
+                            <figure class="blog-card-figure">
+                                <img src="assets/images/blogs/02.png" alt="blog image" />
                             </figure>
-                            <div class="blog-card__content">
-                                <h3 class="blog-card__content-title">
-                                    <a class="blog-card__content-link" href="#">10 Dangerous diseases Lorem spam</a>
+                            <div class="blog-card-content">
+                                <h3 class="blog-card-title">
+                                    <a class="blog-card-link" href="#">10 Dangerous diseases Lorem spam</a>
                                 </h3>
-                                <div class="blog-card__content-info">
-                                    <div class="blog-card__content-data">
-                                        <span class="icon icon--sm">
+                                <div class="blog-card-info">
+                                    <div class="blog-card-data">
+                                        <span class="icon icon-small">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 22">
                                                 <path
                                                     stroke="currentColor"
@@ -566,10 +530,10 @@
                                                 />
                                             </svg>
                                         </span>
-                                        <span class="blog-card__content-value">2022/06/21</span>
+                                        <span class="blog-card-value">2022/06/21</span>
                                     </div>
-                                    <div class="blog-card__content-data">
-                                        <span class="icon icon--sm">
+                                    <div class="blog-card-data">
+                                        <span class="icon icon-small">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
                                                 <path
                                                     fill="currentColor"
@@ -577,24 +541,24 @@
                                                 />
                                             </svg>
                                         </span>
-                                        <span class="blog-card__content-value">Yasin Abbasi</span>
+                                        <span class="blog-card-value">Yasin Abbasi</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="blog__content-item">
+                    <div class="blog-item">
                         <div class="blog-card">
-                            <figure class="blog-card__figure">
-                                <img class="blog-card__img" src="assets/images/blogs/02.png" alt="blog image" />
+                            <figure class="blog-card-figure">
+                                <img src="assets/images/blogs/02.png" alt="blog image" />
                             </figure>
-                            <div class="blog-card__content">
-                                <h3 class="blog-card__content-title">
-                                    <a class="blog-card__content-link" href="#">10 Dangerous diseases Lorem spam</a>
+                            <div class="blog-card-content">
+                                <h3 class="blog-card-title">
+                                    <a class="blog-card-link" href="#">10 Dangerous diseases Lorem spam</a>
                                 </h3>
-                                <div class="blog-card__content-info">
-                                    <div class="blog-card__content-data">
-                                        <span class="icon icon--sm">
+                                <div class="blog-card-info">
+                                    <div class="blog-card-data">
+                                        <span class="icon icon-small">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 22">
                                                 <path
                                                     stroke="currentColor"
@@ -604,10 +568,10 @@
                                                 />
                                             </svg>
                                         </span>
-                                        <span class="blog-card__content-value">2022/06/21</span>
+                                        <span class="blog-card-value">2022/06/21</span>
                                     </div>
-                                    <div class="blog-card__content-data">
-                                        <span class="icon icon--sm">
+                                    <div class="blog-card-data">
+                                        <span class="icon icon-small">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
                                                 <path
                                                     fill="currentColor"
@@ -615,24 +579,24 @@
                                                 />
                                             </svg>
                                         </span>
-                                        <span class="blog-card__content-value">Yasin Abbasi</span>
+                                        <span class="blog-card-value">Yasin Abbasi</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="blog__content-item">
+                    <div class="blog-item">
                         <div class="blog-card">
-                            <figure class="blog-card__figure">
-                                <img class="blog-card__img" src="assets/images/blogs/03.jpg" alt="blog image" />
+                            <figure class="blog-card-figure">
+                                <img src="assets/images/blogs/03.jpg" alt="blog image" />
                             </figure>
-                            <div class="blog-card__content">
-                                <h3 class="blog-card__content-title">
-                                    <a class="blog-card__content-link" href="#">10 Dangerous diseases Lorem spam</a>
+                            <div class="blog-card-content">
+                                <h3 class="blog-card-title">
+                                    <a class="blog-card-link" href="#">10 Dangerous diseases Lorem spam</a>
                                 </h3>
-                                <div class="blog-card__content-info">
-                                    <div class="blog-card__content-data">
-                                        <span class="icon icon--sm">
+                                <div class="blog-card-info">
+                                    <div class="blog-card-data">
+                                        <span class="icon icon-small">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 22">
                                                 <path
                                                     stroke="currentColor"
@@ -642,10 +606,10 @@
                                                 />
                                             </svg>
                                         </span>
-                                        <span class="blog-card__content-value">2022/06/21</span>
+                                        <span class="blog-card-value">2022/06/21</span>
                                     </div>
-                                    <div class="blog-card__content-data">
-                                        <span class="icon icon--sm">
+                                    <div class="blog-card-data">
+                                        <span class="icon icon-small">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
                                                 <path
                                                     fill="currentColor"
@@ -653,7 +617,7 @@
                                                 />
                                             </svg>
                                         </span>
-                                        <span class="blog-card__content-value">Yasin Abbasi</span>
+                                        <span class="blog-card-value">Yasin Abbasi</span>
                                     </div>
                                 </div>
                             </div>
@@ -663,66 +627,62 @@
             </section>
         </main>
         <footer class="footer">
-            <div class="footer__content">
+            <div class="footer-content">
                 <div class="container">
-                    <div class="footer__content-top">
-                        <div class="footer__content-item">
-                            <div class="footer__content-box">
-                                <h5 class="footer__content-title">Menu</h5>
-                                <hr class="footer__content-hr" />
-                                <div class="footer__content-data">
-                                    <ul class="footer__content-menu">
-                                        <li class="footer__content-menu__item">
-                                            <a href="#" class="footer__content-menu__link">Home</a>
+                    <div class="footer-content-top">
+                        <div class="footer-content-item">
+                            <div class="footer-content-box">
+                                <h5 class="footer-content-title">Menu</h5>
+                                <hr class="footer-content-hr" />
+                                <div class="footer-content-data">
+                                    <ul class="footer-menu">
+                                        <li class="footer-menu-item">
+                                            <a href="#" class="footer-menu-link">Home</a>
                                         </li>
-                                        <li class="footer__content-menu__item">
-                                            <a href="#" class="footer__content-menu__link">Services</a>
+                                        <li class="footer-menu-item">
+                                            <a href="#" class="footer-menu-link">Services</a>
                                         </li>
-                                        <li class="footer__content-menu__item">
-                                            <a href="#" class="footer__content-menu__link">Question & Answers</a>
+                                        <li class="footer-menu-item">
+                                            <a href="#" class="footer-menu-link">Question & Answers</a>
                                         </li>
-                                        <li class="footer__content-menu__item">
-                                            <a href="#" class="footer__content-menu__link">About us</a>
+                                        <li class="footer-menu-item">
+                                            <a href="#" class="footer-menu-link">About us</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="footer__content-item">
-                            <div class="footer__content-box">
-                                <h5 class="footer__content-title">About Us</h5>
-                                <hr class="footer__content-hr" />
-                                <div class="footer__content-data">
-                                    <p class="footer__content-text">
+                        <div class="footer-content-item">
+                            <div class="footer-content-box">
+                                <h5 class="footer-content-title">About Us</h5>
+                                <hr class="footer-content-hr" />
+                                <div class="footer-content-data">
+                                    <p class="footer-content-text">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et excepturi quasi
                                         culpa animi similique voluptatum adipisci.
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="footer__content-item">
-                            <form action="/" method="post" class="footer__form">
-                                <div class="footer__input">
-                                    <div class="input input--text">
-                                        <div class="input__image">
-                                            <img
-                                                class="input__img"
-                                                src="assets/images/icons/email.svg"
-                                                alt="Mail icon"
-                                            />
+                        <div class="footer-content-item">
+                            <form action="/" method="post" class="footer-form">
+                                <div class="footer-input">
+                                    <div class="input input-text">
+                                        <div class="input-image">
+                                            <img src="assets/images/icons/email.svg" alt="Mail icon" />
                                         </div>
-                                        <input type="email" placeholder="Email" name="email" class="input__inpt" />
+                                        <input type="email" placeholder="Email" name="email" class="input-inpt" />
                                     </div>
                                 </div>
-                                <div class="footer__button">
-                                    <button type="submit" class="btn btn--small btn--primary">Send</button>
+                                <div class="footer-button">
+                                    <button type="submit" class="btn btn-small btn-primary">Send</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                <div class="footer__content-bottom">
-                    <p class="footer__content-p">Copy Right @ 2022</p>
+                <div class="footer-content-bottom">
+                    <p class="footer-content-p">Copy Right @ 2022</p>
                 </div>
             </div>
         </footer>

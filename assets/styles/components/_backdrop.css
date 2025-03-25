@@ -2,11 +2,11 @@
     display: none;
 }
 
-.backdrop--enable {
+.backdrop-enable {
     display: none;
 }
 
-.backdrop--disable {
+.backdrop-disable {
     display: none;
 }
 
@@ -24,7 +24,7 @@
         background-color: #0003;
     }
 
-    .backdrop--enable {
+    .backdrop-enable {
         display: block;
     }
 }

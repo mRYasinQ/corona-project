@@ -32,15 +32,15 @@ body {
     color: var(--color-background);
 }
 
-.overflow-y--hidden {
+.overflow-y-hidden {
     overflow-y: hidden;
 }
 
-.text--yellow {
+.text-yellow {
     color: var(--text-color-yellow) !important;
 }
 
-.text--primary {
+.text-primary {
     color: var(--color-primary) !important;
 }
 

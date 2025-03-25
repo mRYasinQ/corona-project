@@ -2,7 +2,7 @@
     margin-top: 6rem;
 }
 
-.countries__wrapper {
+.countries-wrapper {
     border-radius: 0.8rem;
     background-color: var(--text-color-white);
     box-shadow: var(--shadow--primary);
@@ -15,30 +15,30 @@
     padding: 1.5rem 1.25rem;
 }
 
-.countries__title {
+.countries-title {
     margin: 0;
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--text-color-dark);
 }
 
-.countries__content {
+.countries-content {
 }
 
-.countries__table {
+.countries-table {
     overflow-x: auto;
     white-space: nowrap;
 }
 
-.countries__tbl {
+.countries-tbl {
     width: 100%;
     border-collapse: collapse;
 }
 
-.countries__tbl-header-row {
+.countries-tbl-header-row {
 }
 
-.countries__tbl-header-row > th {
+.countries-tbl-header-row > th {
     padding: 1rem 1rem;
     color: var(--text-color-dark);
     font-size: 1rem;
@@ -46,11 +46,11 @@
     text-align: start;
 }
 
-.countries__tbl-header-row > th:first-child {
+.countries-tbl-header-row > th:first-child {
     width: 0.5rem;
 }
 
-.countries__tbl-body-row > td {
+.countries-tbl-body-row > td {
     padding: 0.5rem 1rem;
     color: var(--text-color-primary);
     font-size: 0.9rem;
@@ -58,32 +58,32 @@
     border-top: 2px solid var(--border-color-primary);
 }
 
-.countries__tbl-body-row > td:first-child {
+.countries-tbl-body-row > td:first-child {
     width: 0.5rem;
 }
 
-.countries__tbl-body-row > td:nth-child(2) {
+.countries-tbl-body-row > td:nth-child(2) {
     text-transform: uppercase;
 }
 
-.countries__tbl-body-row > td:last-child > .icon {
+.countries-tbl-body-row > td:last-child > .icon {
     margin-left: auto;
 }
 
-.countries__tbl-image {
+.countries-tbl-image {
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 999px;
     overflow: hidden;
 }
 
-.countries__tbl-img {
+.countries-tbl-image > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.countries__btns {
+.countries-btns {
     display: flex;
     justify-content: center;
     padding: 1.5rem 1.25rem;
@@ -96,7 +96,7 @@
 }
 
 @media only screen and (max-width: 576px) {
-    .countries__btns > .btn {
+    .countries-btns > .btn {
         width: 100%;
     }
 }

@@ -13,33 +13,33 @@
     cursor: pointer;
 }
 
-.btn--legendary {
+.btn-legendary {
     font-weight: 600;
     color: var(--color-background);
     background: linear-gradient(108deg, #00c293 23%, var(--color-primary) 55%);
 }
 
-.btn--primary {
+.btn-primary {
     font-weight: 600;
     color: var(--color-background);
     background-color: var(--color-primary);
 }
 
-.btn--secondary {
+.btn-secondary {
     font-weight: 700;
     color: var(--color-primary);
     background-color: var(--color-background);
     border: 2px solid var(--color-primary);
 }
 
-.btn--small {
+.btn-small {
     width: 6rem;
 }
 
-.btn--medium {
+.btn-medium {
     width: 8rem;
 }
 
-.btn--large {
+.btn-large {
     width: 10rem;
 }
