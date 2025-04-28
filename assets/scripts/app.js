@@ -1,4 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
+import { setCountries } from './modules/countries.js';
+
+document.addEventListener('DOMContentLoaded', async () => {
+    await setCountries();
+
     const chart1 = document.getElementById('chart-1');
     const chart2 = document.getElementById('chart-2');
 
