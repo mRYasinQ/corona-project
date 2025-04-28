@@ -56,6 +56,10 @@
     text-align: start;
 }
 
+.statistic-content-data:first-child > .statistic-content-label {
+    text-align: start;
+}
+
 .statistic-content-value {
     font-size: 1.1rem;
     text-align: center;
@@ -65,6 +69,7 @@
 
 .statistic-content-label {
     font-size: 1rem;
+    text-align: center;
     font-weight: 700;
     color: var(--color-primary);
 }
@@ -93,6 +98,10 @@
 }
 
 @media only screen and (max-width: 992px) {
+    .statistic-content-top {
+        height: auto;
+    }
+
     .statistic-form {
         flex-direction: column;
         gap: 1.5rem;
@@ -104,6 +113,10 @@
 
     .statistic-form-button > .btn {
         width: 100%;
+    }
+
+    .statistic-content-bottom {
+        height: auto;
     }
 }
 
@@ -119,6 +132,10 @@
     }
 
     .statistic-content-value {
+        text-align: start;
+    }
+
+    .statistic-content-label {
         text-align: start;
     }
 }
