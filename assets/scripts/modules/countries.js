@@ -1,24 +1,25 @@
+import handleError from '../exception/handleError.js';
 import { getCountries, getCountry } from '../services/countriesService.js';
 import DefaultCountry from '../constants/defaultCountry.js';
 
 const countryInput = document.querySelector('.statistic-form-input');
-const countryImage = countryInput.querySelector('img');
-const countrySelectBox = countryInput.querySelector('select');
+const countryImage = countryInput?.querySelector('img');
+const countrySelectBox = countryInput?.querySelector('select');
+let getCountryController = null;
 
-function createCountryList(countries) {
-    const defaultOption = `<option value='${DefaultCountry.value}' selected>${DefaultCountry.name}</option>`;
-    countrySelectBox.insertAdjacentHTML('afterbegin', defaultOption);
-
-    countries['data'].forEach((country) => {
-        const option = `<option value='${country.iso}'>${country.name}</option>`;
-        countrySelectBox.insertAdjacentHTML('beforeend', option);
-    });
+async function initCountries() {
+    await setCountries();
+    countrySelectBox?.addEventListener('change', updateCountryImage);
 }
 
 async function updateCountryImage(event) {
-    const selectedIndex = countrySelectBox.selectedIndex;
-    const selectedOption = countrySelectBox.options[selectedIndex];
-    const iso = selectedOption.value;
+    const selectedIndex = countrySelectBox?.selectedIndex;
+    const selectedOption = countrySelectBox?.options[selectedIndex];
+    const iso = selectedOption?.value;
+
+    if (getCountryController) {
+        getCountryController.abort();
+    }
 
     if (iso == DefaultCountry.value) {
         countryImage.src = DefaultCountry.flag;
@@ -27,30 +28,30 @@ async function updateCountryImage(event) {
     }
 
     try {
-        const country = await getCountry(iso, 'flags');
+        getCountryController = new AbortController();
+        const country = await getCountry(iso, 'flags', getCountryController.signal);
 
         countryImage.src = country?.flags?.svg || DefaultCountry.flag;
         countryImage.alt = country?.flags?.alt || DefaultCountry.alt;
     } catch (error) {
-        if (error.statusCode == 404) {
-            countryImage.src = DefaultCountry.flag;
-            countryImage.alt = DefaultCountry.alt;
-        }
-
-        console.log(error);
+        handleError(error);
     }
 }
 
 async function setCountries() {
-    try {
-        const countries = await getCountries();
+    const countries = await getCountries();
 
-        createCountryList(countries);
-    } catch (error) {
-        console.log(error);
-    }
+    createCountryList(countries);
 }
 
-countrySelectBox.addEventListener('change', updateCountryImage);
+function createCountryList(countries) {
+    const defaultOption = `<option value='${DefaultCountry.value}' selected>${DefaultCountry.name}</option>`;
+    countrySelectBox?.insertAdjacentHTML('afterbegin', defaultOption);
 
-export { setCountries };
+    countries['data'].forEach((country) => {
+        const option = `<option value='${country.iso}'>${country.name}</option>`;
+        countrySelectBox?.insertAdjacentHTML('beforeend', option);
+    });
+}
+
+export { initCountries };

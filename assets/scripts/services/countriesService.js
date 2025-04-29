@@ -5,7 +5,7 @@ const countryCache = new Map();
 
 async function getCountries(order = 'name', sort = 'asc') {
     const response = await fetch(`${BaseUrls.covidApi}/regions?order=${order}&sort=${sort}`);
-    if (!response.ok || response.status != 200) {
+    if (!response.ok) {
         throw new AppError('Problem Exist.', response.status);
     }
 
@@ -14,14 +14,16 @@ async function getCountries(order = 'name', sort = 'asc') {
     return countries;
 }
 
-async function getCountry(iso, fields = 'name,flags') {
+async function getCountry(iso, fields = 'name,flags', signal) {
     const countryKey = `${iso}-${fields}`;
 
     if (countryCache.has(countryKey)) {
         return countryCache.get(countryKey);
     }
 
-    const response = await fetch(`${BaseUrls.countriesApi}/alpha/${iso}?fields=${fields}`);
+    const response = await fetch(`${BaseUrls.countriesApi}/alpha/${iso}?fields=${fields}`, {
+        signal,
+    });
     if (!response.ok) {
         if (response.status === 404) {
             throw new AppError('Country not found.', response.status);

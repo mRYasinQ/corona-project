@@ -8,6 +8,7 @@
 @import 'sections/_footer.css';
 
 @import 'components/_backdrop.css';
+@import 'components/_loading.css';
 @import 'components/_button.css';
 @import 'components/_input.css';
 @import 'components/_icon.css';
