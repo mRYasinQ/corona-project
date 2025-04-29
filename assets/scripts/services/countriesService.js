@@ -21,9 +21,7 @@ async function getCountry(iso, fields = 'name,flags', signal) {
         return countryCache.get(countryKey);
     }
 
-    const response = await fetch(`${BaseUrls.countriesApi}/alpha/${iso}?fields=${fields}`, {
-        signal,
-    });
+    const response = await fetch(`${BaseUrls.countriesApi}/alpha/${iso}?fields=${fields}`, { signal });
     if (!response.ok) {
         if (response.status === 404) {
             throw new AppError('Country not found.', response.status);
