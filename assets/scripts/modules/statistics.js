@@ -43,18 +43,18 @@ function showCountryStats(stats) {
         const value = stats.data[keyData] ?? 'N/N';
         let valueClass = 'statistic-content-value';
 
-        if (label === 'Death') {
-            if (value > 500) valueClass += ' text-yellow';
+        if (label === 'Death' && typeof value === 'number') {
+            if (value >= 500) valueClass += ' text-yellow';
         }
 
         if (!dateInput.value) dateInput.value = stats.data['date'] ?? '';
 
-        const html = `
+        const statsElement = `
         <div class="statistic-content-data">
             <span class="${valueClass}">${value.toLocaleString()}</span>
             <span class="statistic-content-label">${label}</span>
         </div>`;
-        countryStatsBox.insertAdjacentHTML('beforeend', html);
+        countryStatsBox.insertAdjacentHTML('beforeend', statsElement);
     });
 }
 
