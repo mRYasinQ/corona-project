@@ -9,7 +9,8 @@
         <link rel="stylesheet" href="assets/styles/style.css" />
         <link rel="stylesheet" href="assets/styles/pages/home.css" />
     </head>
-    <body x-bind:class="showMenu ? 'overflow-y-hidden' : ''" class="overflow-hidden">
+    <body class="overflow-hidden" x-bind:class="showMenu ? 'overflow-y-hidden' : ''">
+        <div class="notify-container container"></div>
         <div
             @click="showMenu = !showMenu"
             x-bind:class="showMenu ? 'backdrop-enable' : 'backdrop-disable'"

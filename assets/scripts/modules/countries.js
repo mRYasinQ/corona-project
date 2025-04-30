@@ -34,6 +34,11 @@ async function updateCountryImage(event) {
         countryImage.src = country?.flags?.svg || DefaultCountry.flag;
         countryImage.alt = country?.flags?.alt || DefaultCountry.alt;
     } catch (error) {
+        if (error.name !== 'AbortError') {
+            countryImage.src = DefaultCountry.flag;
+            countryImage.alt = DefaultCountry.alt;
+        }
+
         handleError(error);
     }
 }

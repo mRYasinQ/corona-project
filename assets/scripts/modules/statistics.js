@@ -4,6 +4,7 @@ import DefaultCountry from '../constants/defaultCountry.js';
 import displayStatistics from '../constants/displayStatistics.js';
 import { getCountryStats } from '../services/statisticsService.js';
 import { formatDate, getLastDayOfMonth } from '../utility/date.js';
+import { notify } from './notify.js';
 
 const STATS_YEAR = 2021;
 const filterForm = document.querySelector('.statistic-form');
@@ -47,6 +48,8 @@ async function filterCountryStats(event) {
 
         showFilterStats(countryStats);
         showBoxStats(todayCountryStats, todayStatsBox);
+
+        notify('Statistic updated.', true);
     } catch (error) {
         handleError(error);
     }

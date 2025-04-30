@@ -1,0 +1,90 @@
+.notify-container {
+    width: 18rem;
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    transform: translateX(-50%);
+    z-index: 1001;
+}
+
+.notify {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    background-color: var(--color-background);
+    box-shadow: var(--shadow--primary);
+    cursor: pointer;
+    animation: bounceIn 1s;
+}
+
+.notify-hide {
+    animation: zoomOutDown 1s !important;
+}
+
+.notify-text {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    color: var(--color-secondary);
+}
+
+@media only screen and (max-width: 576px) {
+    .notify-container {
+        width: 100%;
+    }
+}
+
+@keyframes bounceIn {
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes zoomOutDown {
+    40% {
+        opacity: 1;
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    to {
+        opacity: 0;
+        transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+}

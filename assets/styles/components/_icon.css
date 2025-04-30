@@ -35,3 +35,11 @@
 .icon-dark {
     color: var(--text-color-dark);
 }
+
+.icon-green {
+    color: var(--text-color-green);
+}
+
+.icon-red {
+    color: var(--text-color-red);
+}
