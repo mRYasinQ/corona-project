@@ -9,7 +9,7 @@ function setLoading(loadingStatus) {
         setTimeout(() => {
             body.classList.remove('overflow-hidden');
             loadingElement.classList.add('loading-disable');
-        }, 1500);
+        }, 500);
     }
 }
 
