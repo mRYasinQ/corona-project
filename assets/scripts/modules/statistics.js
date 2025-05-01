@@ -2,7 +2,8 @@ import AppError from '../exception/AppError.js';
 import handleError from '../exception/handleError.js';
 import DefaultCountry from '../constants/defaultCountry.js';
 import displayStatistics from '../constants/displayStatistics.js';
-import { getCountryStats } from '../services/statisticsService.js';
+import { getCountry } from '../services/countriesService.js';
+import { getCountriesStats, getCountryStats } from '../services/statisticsService.js';
 import { formatDate, getLastDayOfMonth } from '../utility/date.js';
 import { notify } from './notify.js';
 
@@ -14,12 +15,15 @@ const todayStatsBox = document.querySelector('#today-statistic > .data-table-con
 const wordlStatsBox = document.querySelector('#world-statistic > .data-table-content');
 const recoveredChart = document.querySelector('#chart-recovered');
 const deathChart = document.querySelector('#chart-death');
+const countriesTable = document.querySelector('.countries-tbl');
+const countriesBody = countriesTable.querySelector('tbody');
 let filterController = null;
 let todayController = null;
 
 async function initStatistics() {
     await showWorldStats();
     await showChartStats();
+    await showOrdersCountry();
 
     filterForm?.addEventListener('submit', filterCountryStats);
 }
@@ -71,6 +75,31 @@ async function showChartStats() {
 
     createChart(recoveredChart, recovered, '#11e5b4');
     createChart(deathChart, death, '#F85252');
+}
+
+async function showOrdersCountry() {
+    const countries = await filterCountriesStats();
+
+    await createTable(countries);
+}
+
+async function filterCountriesStats() {
+    const countriesStats = await getCountriesStats();
+    const filterCountries = countriesStats.data.map(
+        ({ confirmed, active, deaths, recovered, region: { iso, name } }) => ({
+            confirmed,
+            active,
+            deaths,
+            recovered,
+            regionName: name,
+            regionIso: iso,
+        })
+    );
+
+    const sortCountries = filterCountries.sort((a, b) => b.confirmed - a.confirmed);
+    const topCountries = sortCountries.slice(0, 7);
+
+    return topCountries;
 }
 
 function showFilterStats(stats) {
@@ -146,6 +175,60 @@ function createChart(chartElement, data, borderColor) {
     const chart = new Chart(chartElement, config);
 
     return chart;
+}
+
+async function createTable(countries) {
+    countriesBody.innerHTML = '';
+
+    for (const [index, country] of countries.entries()) {
+        let countryImage = null;
+        let countryImageAlt = null;
+
+        try {
+            const countryData = await getCountry(country.regionIso, 'flags');
+
+            countryImage = countryData?.flags?.svg || DefaultCountry.flag;
+            countryImageAlt = countryData?.flags?.alt || DefaultCountry.alt;
+        } catch (error) {
+            countryImage = DefaultCountry.flag;
+            countryImageAlt = DefaultCountry.alt;
+        } finally {
+            const trElement = document.createElement('tr');
+            trElement.classList.add('countries-tbl-body-row');
+
+            createDataTable(trElement, { flag: { countryImage, countryImageAlt }, country, rank: index + 1 });
+
+            countriesBody.append(trElement);
+        }
+    }
+}
+
+function createDataTable(rowElement, { flag, country, rank }) {
+    const tdHtml = `
+    <td>
+        <div class="countries-tbl-image">
+            <img src="${flag.countryImage}" alt="${flag.countryImageAlt}" />
+        </div>
+    </td>
+    <td>${country.regionName}</td>
+    <td>${rank.toLocaleString()}</td>
+    <td>${country.confirmed.toLocaleString()}</td>
+    <td>${country.active.toLocaleString()}</td>
+    <td>${country.deaths.toLocaleString()}</td>
+    <td>${country.recovered.toLocaleString()}</td>
+    <td>
+        <span class="icon icon-small icon-dark icon-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 3 13">
+                <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M2.5 1.25a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Zm0 5a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0ZM1.25 12.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z"
+                    clip-rule="evenodd"
+                />
+            </svg>
+        </span>
+    </td>`;
+    rowElement.insertAdjacentHTML('beforeend', tdHtml);
 }
 
 export { initStatistics };
