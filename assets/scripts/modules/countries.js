@@ -9,6 +9,7 @@ let getCountryController = null;
 
 async function initCountries() {
     await setCountries();
+
     countrySelectBox?.addEventListener('change', updateCountryImage);
 }
 
